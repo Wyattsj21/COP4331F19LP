@@ -1,0 +1,84 @@
+<pre>main()
+{
+    // import the file
+    file = new File("ToBeEncoded.txt");
+    
+    // run algorithm. LZ77 first, follows by Huffman
+    output = huffman(lz77(file));
+    output.toNewFile();
+    return;
+}
+
+// modified LZ77
+lz77()
+{
+    // traverse through the entire file
+    // each ASCII character is 1 byte
+    while ( file has next byte? )
+    {
+        // put the data into the sliding window
+        fillLookAheadBuffer();
+        
+        // traverse SB for duplicate data from LAB
+        if ( match found )
+        {
+            continue looking for longer match
+        }
+        
+        d = SB.length - ptr; // default value 0 as ptr = SB.length
+        l = data.matchedLength; // default 0
+        c = data.lastChar;
+        
+        // Deflate's LZ77 ignores 0 by default
+        if ( l & d are not 0 )
+            output.append("%c%c%c", d, l, c);
+        else
+            output.append("%c", c);
+            
+        // move matched contents from LAB to SB 
+        // remove oldest data of SB if filled
+        toSerchBuffer(data);
+    }
+    
+    return output;
+}
+
+// modified Huffman Coding
+huffman()
+{
+    // traverse through the entire file
+    // count the occurence of each character
+    // array size of 255 as there are 255 8-bit ASCII characters
+    while ( not end of file )
+    {
+        character = file.nextChar();
+        
+        // it is possible to use Char as array index
+        count[character]++;
+    }
+    
+    // remove all chracters with 0 count
+    count.removeZero();
+    
+    // sort by #occurrences & alphabetically
+    count.huffmanSort();
+    
+    // make a priority queue
+    while ( there are stil characters inside array )
+    {
+        tree.push = count.pop;
+    }
+    
+    // add priority queue to output file
+    output.concat(tree.layout());
+    
+    // produce output based on tree layout
+    // left branch = 0, right branch = 1
+    for ( i = 0; i < file.length; i++ )
+    {
+        output.concat(treeBranch(file.charAt[i]));
+    }
+    
+    return output;
+}
+</pre>

@@ -1,0 +1,6 @@
+A Huffman code is a compression algorithm that encodes different symbols (such as characters) in varying lengths. The lengths of these encoded symbols are based on the frequency of the symbols in the block of data to be encoded. The frequency of a symbol is determined by counting how of each symbol exists in the block of data. The symbol that appears the most in the block is given the shortest encoding, while the least frequent symbol is given the longest encoding. 
+
+Huffman encodings can be visualized as trees. An example of the Huffman encoding of a string is shown below:
+The encoding of characters must be done in such a way that the decoder can determine the length of the code that is being read.
+
+For the demonstration of Huffman, the same string was used. The compressed string now has 98 bits in length. That is about a 53% reduction in size when compare to the original string length of 208 bits.

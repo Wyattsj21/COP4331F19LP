@@ -1,0 +1,38 @@
+<pre>main()
+{
+    // import the file
+    file = new File("ToBeEncoded.txt");
+    
+    // traverse through the entire file
+    // count the occurence of each character
+    // array size of 255 as there are 255 8-bit ASCII characters
+    while ( not end of file )
+    {
+        character = file.nextChar();
+        // it is possible to use Char as array index
+        count[character]++;
+    }
+    
+    // remove all chracters with 0 count
+    count.removeZero();
+    
+    // make a priority queue
+    while ( there are stil characters inside array )
+    {
+        tree.push = count.pop;
+    }
+    
+    // add priority queue to output file
+    output.concat(tree.layout());
+    
+    // produce output based on tree layout
+    // left branch = 0, right branch = 1
+    for ( i = 0; i < file.length; i++ )
+    {
+        output.concat(treeBranch(file.charAt[i]));
+    }
+    
+    output.toNewFile();
+    return;
+}
+</pre>

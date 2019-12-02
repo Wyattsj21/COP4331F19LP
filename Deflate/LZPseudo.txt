@@ -1,0 +1,31 @@
+<pre>main()
+{
+    // import the file
+    file = new File("ToBeEncoded.txt");
+    
+    // traverse through the entire file
+    // each ASCII character is 1 byte
+    while ( file has next byte? )
+    {
+        // put the data into the sliding window
+        fillLookAheadBuffer();
+        
+        // traverse SB for duplicate data from LAB
+        if ( match found )
+        {
+            continue looking for longer match
+        }
+        
+        d = SB.length - ptr; // default value 0 as ptr = SB.length
+        l = data.matchedLength; // default 0
+        c = data.lastChar;
+        output.append("%c%c%c", d, l, c);
+        
+        // move matched contents from LAB to SB 
+        // remove oldest data of SB if filled
+        toSerchBuffer(data);
+    }
+    
+    output.toNewFile();
+    return;
+}</pre>

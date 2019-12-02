@@ -1,0 +1,23 @@
+We are presenting the Deflate tutorial website.
+After this 12 miniutes you will be compression.
+Deflate compresses a compressed file by shortening bytes and then compresses the table to decode the compression.
+I messed up that last part at first. Actual code will be avaliable later due to this specifically the 11th.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*********************************************************************************************

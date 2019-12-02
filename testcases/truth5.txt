@@ -1,0 +1,7 @@
+#include<srdio.h>
+
+int main(void)
+{
+  printf("Hello World Dieing Due To Climate Change");
+  return 0;
+}

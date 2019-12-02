@@ -1,0 +1,8 @@
+!@#$%^&*())(*&^%$#@!!@#$%^&*()
+
+
+do new lines work?
+
+New lines work?
+
+goto line 4;\\//

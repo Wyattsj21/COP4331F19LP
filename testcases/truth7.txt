@@ -1,0 +1,3 @@
+for people in Florida:
+  if people.likeFlorida():
+    people.weird = true;
